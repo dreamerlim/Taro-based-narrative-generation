@@ -8,7 +8,7 @@ using System.IO;
 // Original Implementation
 // https://github.com/annetropy/tarot-narrative/blob/master/tarot/code/tarot.js
 // The dir that contains all the json files needs to be on the same as the "Assests" dir.
-public class Main : MonoBehaviour
+public class Parser : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
