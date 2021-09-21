@@ -12,7 +12,7 @@ public class Constants
     public static string TRAGEDY = "tragedy";
 
      // list of verb tenses
-    enum VerbTense {
+    public enum VerbTense {
         past,
         infinitive,
         present_participle,
@@ -20,7 +20,7 @@ public class Constants
     }
 
     // list of seasons for the tag line generation
-    enum Season {
+    public enum Season {
         SPRING,
         SUMMER,
         FALL,
