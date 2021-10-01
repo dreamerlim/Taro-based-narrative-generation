@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using SimpleJSON;
 using System.IO;
 
@@ -12,7 +11,7 @@ using System.IO;
 // Need to remove "Monobehaviour" to avoid a warning
 // This class parses a deck of tarot cards that is in json file format.
 // After it parses, it creates a deck of card objects.
-public class Parser : MonoBehaviour
+public class Parser
 {
 
     // Converts a string verb tense into its corresponding enum int value,
@@ -141,15 +140,15 @@ public class Parser : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    void Start()
-    {
-        string json_file_path = "json_files/tarot-story.json";
-        List<Card> card_deck = create_deck(json_file_path);
-    }
+    // void Start()
+    // {
+    //     string json_file_path = "json_files/tarot-story.json";
+    //     List<Card> card_deck = create_deck(json_file_path);
+    // }
 
-    // Update is called once per frame
-    void Update()
-    {
+    // // Update is called once per frame
+    // void Update()
+    // {
         
-    }
+    // }
 }

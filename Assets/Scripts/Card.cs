@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
 // This class represents a Card Object.
-public class Card : MonoBehaviour
+public class Card
 {
     // Name of the card
     public string name {get; set;}
@@ -62,38 +61,38 @@ public class Card : MonoBehaviour
     }
 
     public void print() {
-        Debug.Log("Name: " + this.name);
-        Debug.Log("Rank: " + this.rank);
-        Debug.Log("Suit: " + this.suit);
-        // Debug.Log(this.story["light"]);
-        // Debug.Log(this.meanings["light"]);
-        Debug.Log("Keywords:");
-        for (int i = 0; i < this.keywords.Count; ++i) {
-            Debug.Log(this.keywords[i]);
-        }
+        // Debug.Log("Name: " + this.name);
+        // Debug.Log("Rank: " + this.rank);
+        // Debug.Log("Suit: " + this.suit);
+        // // Debug.Log(this.story["light"]);
+        // // Debug.Log(this.meanings["light"]);
+        // Debug.Log("Keywords:");
+        // for (int i = 0; i < this.keywords.Count; ++i) {
+        //     Debug.Log(this.keywords[i]);
+        // }
 
-        Debug.Log("Fortune Telling:");
-        for (int i = 0; i < this.fortune_telling.Count; ++i) {
-            Debug.Log(this.fortune_telling[i]);
-        }
+        // Debug.Log("Fortune Telling:");
+        // for (int i = 0; i < this.fortune_telling.Count; ++i) {
+        //     Debug.Log(this.fortune_telling[i]);
+        // }
 
-        Debug.Log("Story:");
-        foreach (KeyValuePair<string, string[]> entry in this.story) {
-            Debug.Log(entry.Key);
-            for (int i = 0; i < entry.Value.Length; ++i) {
-                Debug.Log(entry.Value[i]);
-            }
-        }
+        // Debug.Log("Story:");
+        // foreach (KeyValuePair<string, string[]> entry in this.story) {
+        //     Debug.Log(entry.Key);
+        //     for (int i = 0; i < entry.Value.Length; ++i) {
+        //         Debug.Log(entry.Value[i]);
+        //     }
+        // }
     
-        Debug.Log("Meanings:");
-        foreach (KeyValuePair<string, List<string>> entry in this.meanings) {
-            Debug.Log(entry.Key);
-            for (int i = 0; i < entry.Value.Count; ++i) {
-                Debug.Log(entry.Value[i]);
-            }
-        }
+        // Debug.Log("Meanings:");
+        // foreach (KeyValuePair<string, List<string>> entry in this.meanings) {
+        //     Debug.Log(entry.Key);
+        //     for (int i = 0; i < entry.Value.Count; ++i) {
+        //         Debug.Log(entry.Value[i]);
+        //     }
+        // }
 
-        Debug.Log("---------------------------------------------------");
+        // Debug.Log("---------------------------------------------------");
     }
 
 }

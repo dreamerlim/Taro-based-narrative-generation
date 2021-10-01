@@ -24,6 +24,8 @@ public class Board : MonoBehaviour
 
     private Card[] five_choosen_cards = new Card[5];
 
+    private string current_theme;
+
     private void initialize() {
         // Initialize stroy templates
         story_templates.Add(Constants.COMEDY, new string[] {"Jack is the best in the world at one thing: ",
@@ -48,12 +50,57 @@ public class Board : MonoBehaviour
         // Initialize verb tenses
         tenses.Add(Constants.COMEDY, new string[] {"present_participle", "present", "infinitive", "infinitive", "infinitive"});
         tenses.Add(Constants.TRAGEDY, new string[] {"infinitive", "infinitive", "present_participle", "present", "present_participle"});
+
+        // Create a deck of cards
+        
+    }
+
+    // Randomly chooses the theme of the story
+    public void pickTheme() {
+        
+    }
+
+    // Generates a deck of cards.
+    public void geneateCardDeck() {
+
+    }
+
+    // Picks a new set of 5 cards. It removes the chosen cards from the deck.
+    // This method is bound to the "New Spread" button.
+    public void newSpread() {
+
+        // Calls updateStory(), updateTagine(), and displayCards() at the end
+    }
+
+    // Picks a new card. It removes the chosen card from the deck
+    // This method is bound to the "New Card" button for each card.
+    public void newCard() {
+
+        // Calls updateStory(), updateTagine(), and displayCards() at the end
+    }
+
+    // Generates a new story.
+    public void updateStory() {
+
+    }
+
+    // Generates a tagline.
+    public void updateTagline() {
+
+    }
+
+    // Display the selected 5 card images on the board.
+    public void displayCards() {
+
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        // Call sequence to initialize the board
+        // 1. pickTheme()
+        // 2. generateCardDeck()
+        // 3. newSpread()
     }
 
     // Update is called once per frame
