@@ -80,12 +80,12 @@ public class Board : MonoBehaviour
         // Calls updateStory(), updateTagine(), and displayCards() at the end
     }
 
-    // Generates a new story.
+    // Updates the story.
     public void updateStory() {
 
     }
 
-    // Generates a tagline.
+    // Updates the tagline.
     public void updateTagline() {
 
     }
