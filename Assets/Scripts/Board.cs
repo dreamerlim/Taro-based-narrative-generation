@@ -68,6 +68,7 @@ public class Board : MonoBehaviour
     // Picks a new set of 5 cards. It removes the chosen cards from the deck.
     // This method is bound to the "New Spread" button.
     public void newSpread() {
+        // Calls the pickTheme() method at first
 
         // Calls updateStory(), updateTagine(), and displayCards() at the end
     }
