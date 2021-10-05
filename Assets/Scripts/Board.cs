@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,6 +17,8 @@ public class Board : MonoBehaviour
 
     // Verb tenses used for each theme
     private Dictionary<string, string[]> tenses = new Dictionary<string, string[]>();
+
+    private string[] themes = new string[] {Constants.COMEDY, Constants.TRAGEDY};
 
     // Darama arc = each card is associated with each spot in the arc
     private string[] arc = new string[] {"Inciting Incident", "Complication", "Crisis", "Climax", "Resolution"};
@@ -57,7 +60,11 @@ public class Board : MonoBehaviour
 
     // Randomly chooses the theme of the story
     public void pickTheme() {
-        
+        System.Random rand = new System.Random();
+        int theme_index = rand.Next(themes.Length);
+        current_theme = themes[theme_index];
+
+        Debug.Log("Currnet Theme: " + current_theme);
     }
 
     // Generates a deck of cards.
@@ -102,6 +109,7 @@ public class Board : MonoBehaviour
         // 1. pickTheme()
         // 2. generateCardDeck()
         // 3. newSpread()
+        pickTheme();
     }
 
     // Update is called once per frame
