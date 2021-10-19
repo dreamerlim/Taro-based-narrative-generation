@@ -347,7 +347,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 64517620}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1775816079}
+        m_TargetAssemblyTypeName: Board, Assembly-CSharp
+        m_MethodName: newCard
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &64517620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -705,7 +717,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 332504605}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1775816079}
+        m_TargetAssemblyTypeName: Board, Assembly-CSharp
+        m_MethodName: newSpread
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &332504605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1301,7 +1325,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 602560529}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1775816079}
+        m_TargetAssemblyTypeName: Board, Assembly-CSharp
+        m_MethodName: newCard
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &602560529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1797,7 +1833,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 896763358}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1775816079}
+        m_TargetAssemblyTypeName: Board, Assembly-CSharp
+        m_MethodName: newCard
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &896763358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2609,7 +2657,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1185256834}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1775816079}
+        m_TargetAssemblyTypeName: Board, Assembly-CSharp
+        m_MethodName: newCard
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1185256834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3404,7 +3464,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1514347008}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1775816079}
+        m_TargetAssemblyTypeName: Board, Assembly-CSharp
+        m_MethodName: newCard
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1514347008
 MonoBehaviour:
   m_ObjectHideFlags: 0

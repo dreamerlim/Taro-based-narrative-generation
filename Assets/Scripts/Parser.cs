@@ -124,7 +124,7 @@ public class Parser
     }
 
     // Creates a deck of card and returns it.
-    List<Card> create_deck(string json_file_path) {
+    public List<Card> create_deck(string json_file_path) {
         List<Card> card_deck = new List<Card>();
         
         string jsonString = File.ReadAllText("json_files/tarot-story.json");

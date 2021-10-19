@@ -23,9 +23,10 @@ public class Board : MonoBehaviour
     // Darama arc = each card is associated with each spot in the arc
     private string[] arc = new string[] {"Inciting Incident", "Complication", "Crisis", "Climax", "Resolution"};
 
-    private List<Card> card_deck = new List<Card>();
+    // private List<Card> card_deck = new List<Card>();
+    private List<Card> card_deck;
 
-    private Card[] five_choosen_cards = new Card[5];
+    private Card[] five_chosen_cards = new Card[5];
 
     private string current_theme;
 
@@ -53,9 +54,6 @@ public class Board : MonoBehaviour
         // Initialize verb tenses
         tenses.Add(Constants.COMEDY, new string[] {"present_participle", "present", "infinitive", "infinitive", "infinitive"});
         tenses.Add(Constants.TRAGEDY, new string[] {"infinitive", "infinitive", "present_participle", "present", "present_participle"});
-
-        // Create a deck of cards
-        
     }
 
     // Randomly chooses the theme of the story
@@ -68,22 +66,51 @@ public class Board : MonoBehaviour
     }
 
     // Generates a deck of cards.
-    public void geneateCardDeck() {
+    public void generateCardDeck() {
+        Parser json_parser = new Parser();
+        string json_file_path = "json_files/tarot-story.json";
+        card_deck = json_parser.create_deck(json_file_path);
 
     }
 
     // Picks a new set of 5 cards. It removes the chosen cards from the deck.
     // This method is bound to the "New Spread" button.
     public void newSpread() {
-        // Calls the pickTheme() method at first
+        // only allow to do new spread if the card deck has enough cards
+        if (card_deck.Count > 5) { 
+            // Calls the pickTheme() method at first
+            pickTheme();
 
-        // Calls updateStory(), updateTagine(), and displayCards() at the end
+            // 1. Get the size of the card deck
+            // 2. Randomly pick a number within the size of the card deck 
+            //    and choose the corresponding card with the same index number
+            // 3. Add the chosen card to the "five_chosen_cards" and remove that card from the card deck list
+            // 4. Repeat steps 2-3, 4 more times
+
+            System.Random rand = new System.Random();
+            int rand_index_num;
+            for (int i = 0; i < 5; ++i) {
+                rand_index_num = rand.Next(card_deck.Count);
+                five_chosen_cards[i] = card_deck[rand_index_num];
+                card_deck.RemoveAt(rand_index_num);
+            }
+
+            // Calls updateStory(), updateTagine(), and displayCards() at the end
+        }
+        
     }
 
     // Picks a new card. It removes the chosen card from the deck
     // This method is bound to the "New Card" button for each card.
-    public void newCard() {
-
+    public void newCard(int card_index) {
+        // only allow to pick a new card if the card deck has enough cards
+        if (card_deck.count > 1) {
+            System.Random rand = new System.Random();
+            int rand_index_num;
+            rand_index_num = rand.Next(card_deck.Count);
+            five_chosen_cards[card_index] = card_deck[rand_index_num];
+            card_deck.RemoveAt(rand_index_num);
+        }
         // Calls updateStory(), updateTagine(), and displayCards() at the end
     }
 
@@ -110,6 +137,8 @@ public class Board : MonoBehaviour
         // 2. generateCardDeck()
         // 3. newSpread()
         pickTheme();
+        generateCardDeck();
+        newSpread();
     }
 
     // Update is called once per frame
