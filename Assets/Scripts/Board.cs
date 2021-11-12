@@ -26,6 +26,9 @@ public class Board : MonoBehaviour
     // private List<Card> card_deck = new List<Card>();
     private List<Card> card_deck;
 
+    public Sprite[] card_image = new Sprite[5];
+    public SpriteRenderer spriteR;
+
     private Card[] five_chosen_cards = new Card[5];
 
     private string current_theme;
@@ -70,7 +73,6 @@ public class Board : MonoBehaviour
         Parser json_parser = new Parser();
         string json_file_path = "json_files/tarot-story.json";
         card_deck = json_parser.create_deck(json_file_path);
-
     }
 
     // Picks a new set of 5 cards. It removes the chosen cards from the deck.
@@ -104,7 +106,7 @@ public class Board : MonoBehaviour
     // This method is bound to the "New Card" button for each card.
     public void newCard(int card_index) {
         // only allow to pick a new card if the card deck has enough cards
-        if (card_deck.count > 1) {
+        if (card_deck.Count > 1) {
             System.Random rand = new System.Random();
             int rand_index_num;
             rand_index_num = rand.Next(card_deck.Count);
@@ -126,7 +128,42 @@ public class Board : MonoBehaviour
 
     // Display the selected 5 card images on the board.
     public void displayCards() {
+        for (int i = 0; i < 5; ++i) {
+            string rank = five_chosen_cards[i].rank;
+            string image_address;
+            switch (rank)
+            {
+                case "page":
+                    rank = "p";
+                    break;
+                case "knight":
+                    rank = "n";
+                    break;
+                case "queen":
+                    rank = "q";
+                    break;
+                case "king":
+                    rank = "k";
+                    break;
+            }
 
+            // coins are listed as pentacles in the filenames
+            if (five_chosen_cards[i].suit == "coins")
+                image_address = "images/cards/" + rank + "p";
+            else
+                image_address = "images/cards/" + rank + five_chosen_cards[i].suit[0];
+
+            card_image[i] = Resources.Load<Sprite>(image_address);
+            spriteR = gameObject.GetComponent<SpriteRenderer>();
+            spriteR.sprite = card_image[i];
+
+            //flip the image when the card theme is shadow
+            if (story_spreads[current_theme][i] == "shadow") {     
+                spriteR.flipX = true;
+            }
+            //Card1 = spriteR.sprite;
+            
+        }
     }
 
     // Start is called before the first frame update
@@ -139,6 +176,11 @@ public class Board : MonoBehaviour
         pickTheme();
         generateCardDeck();
         newSpread();
+    }
+    public void exitGame()
+    {
+        Application.Quit();
+        Debug.Log("Game is exiting");
     }
 
     // Update is called once per frame

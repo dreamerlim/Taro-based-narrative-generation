@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 
 // This class represents a Card Object.
 public class Card
 {
+    // Image of the card
+    //public Sprite card_image;
+
     // Name of the card
     public string name {get; set;}
 
