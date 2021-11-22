@@ -5,9 +5,6 @@ using UnityEngine;
 // This class represents a Card Object.
 public class Card
 {
-    // Image of the card
-    //public Sprite card_image;
-
     // Name of the card
     public string name {get; set;}
 
@@ -18,17 +15,17 @@ public class Card
     public string suit {get; set;}
 
     // Keywords of the card
-    private List<string> keywords = new List<string>();
+    public List<string> keywords = new List<string>();
 
     // Fortune telling of the card
     // private Dictionary<string, List<string>> fortune_telling;
-    private List<string> fortune_telling = new List<string>();
+    public List<string> fortune_telling = new List<string>();
 
     // Stories of the card
-    private Dictionary<string, string[]> story;
+    public Dictionary<string, string[]> story;
 
     // Meanings of the card
-    private Dictionary<string, List<string>> meanings;
+    public Dictionary<string, List<string>> meanings;
 
     public Card() {}
 

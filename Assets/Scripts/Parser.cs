@@ -127,7 +127,7 @@ public class Parser
     public List<Card> create_deck(string json_file_path) {
         List<Card> card_deck = new List<Card>();
         
-        string jsonString = File.ReadAllText("json_files/tarot-story.json");
+        string jsonString = File.ReadAllText("json_files/tarot.json");
         var N = JSON.Parse(jsonString);
         int num_of_interpretations = N["tarot_interpretations"].Count;
 
